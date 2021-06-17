@@ -1,0 +1,53 @@
+﻿@model MyMVC.Models.Usuario
+@{ 
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Listar dados do usúario</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<fieldset>
+    <legend>Dados do Usúario</legend>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.Codigo)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayNameFor(model => model.Codigo)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayNameFor(model => model.Descricao)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.Peso)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayNameFor(model => model.Peso)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.Categoria)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayNameFor(model => model.Categoria)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.Valorunitario)
+    </div>
+    <div class="editor-field">
+        @Html.DisplayNameFor(model => model.Valorunitario)
+    </div>
+    <p>@Html.ActionLink("Voltar", "Index")</p>
+</fieldset>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+}
+}
